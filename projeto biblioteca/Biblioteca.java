@@ -39,7 +39,7 @@ public class Biblioteca{
         } while (opcao != 0);
         scanner.close();
 
-
+// metodo para cadastrar livros.
     public static void cadastrarLivro(){
         System.out.println("------ Cadastro de Livro -------");
 
@@ -47,16 +47,41 @@ public class Biblioteca{
         String titulo = scanner.nextLine();
 
         System.out.println("Autor ");
-        Sting autor = scanner.nestLine();
+        String autor = scanner.nestLine();
 
-        System.out.println("Ano: ")
-        int ano = scanner.nestLine();
+        System.out.println("Ano: ");
+        int ano = scanner.nextInt();
 
         System.out.println("Genero: ");
+        String genero = scanner.nestLine();
+
+        System.out.println("Editora: ")
+        String editor = Scanner.nestLine();
+
+        Livro novoLivro = new  Livro(titulo, autor, ano, genero, editor);
+        Livros.add(novoLivro)
+        System.out.println("Livro" + titulo + "cadastrado com sucesso!");
+    }
+
+//metodo para cadastro de usuário; 
+    public static void cadastrarUsuario(){
+        system.out.println("--------- Cadastro de Usuário ------- ");
+
+        System.out.println("Nome: ")/
+        String nomeUser = scanner.nestLine();
+
+        System.out.println("Matricula: ");
+        String matriculaUser = scanner.nestLine();
+
+        System.out.println("CPF: ");
+        String cpfUser = scanner.nestLine();
+
+        System.out.println("E-mail: ");
+        String emailUser = scanner.nestLine();
         
-
-
-
+        Usuario novoUsuario = new Usuario(nomeUser, matriculaUser, cpfUser, emailUser);
+        Usuario.add(novoUsuario);
+        System.out.println("Usuário" + nomesUser + "cadastrado com sucesso!!"); 
     }
 
     }
